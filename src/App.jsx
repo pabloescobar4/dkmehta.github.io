@@ -1,4 +1,4 @@
-import guest from './img/guest.png';
+import React from 'react';
 import './App.css';
 import FetchApi from './Components/fetchApi';
 

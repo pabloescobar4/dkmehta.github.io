@@ -3,7 +3,7 @@ import React from 'react';
 // import Data from "./data.json"
 import './fetchapi.css';
 import axios from 'axios';
-import Sort from './Sort';
+// import Sort from './Sort';
 
 const FetchApi = () => {
   const [data, setData] = useState([]);

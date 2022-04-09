@@ -15,7 +15,7 @@ export default function Navbar() {
 	 <div>
 
 		
-<img className=" -mt-8 w-11/12 " src="http://divyakaushal.navnaukri.com/public/uploads/employer/JOBPORTAL-1574239914.png" alt="" />
+<img className=" -mt-8  " src="http://divyakaushal.navnaukri.com/public/uploads/employer/JOBPORTAL-1574239914.png" alt="" />
  
  </div>
 

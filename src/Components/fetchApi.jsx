@@ -28,7 +28,7 @@ const FetchApi = () => {
   const fetchData = async (page, limit, filter) => {
     setLoading(true);
     return axios({
-      url: 'http://localhost:8002/blogs',
+      url: 'https://my-json-server.typicode.com/pabloescobar4/database/blogs',
       method: 'GET',
       params: {
         _page: page,
@@ -72,7 +72,7 @@ const FetchApi = () => {
     let value = e.target.value;
     setSortValue(value);
     return axios({
-      url: `http://localhost:8002/blogs?_sort=${value}&_order=asc`,
+      url: `https://my-json-server.typicode.com/pabloescobar4/database/blogs?_sort=${value}&_order=asc`,
       method: 'GET',
       params: {
         _page: page,

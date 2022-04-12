@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 import React from 'react';
-// import Data from "./data.json"
-import './fetchapi.css';
+import '../App.css';
 import axios from 'axios';
-// import Sort from './Sort';
+
 
 const FetchApi = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [limit, setLimit] = useState(3);
+  const [limit, setLimit] = useState(9);
   const [sort, setSort] = useState('');
   const [sortValue, setSortValue] = useState('');
 
@@ -115,12 +114,16 @@ const FetchApi = () => {
 
   return (
     <div>
-     
       {/* <button onClick= {sortL}>sortLto H rating</button> */}
       <div className="ml-96 mb-1 flex mt-16">
-       
-        <h5 className="bg-white drop-shadow-lg rounded-xl p-3 h-10  ml-4 w-24">Sort By:</h5>
-        <select value={sortValue} onChange={handleSort} className="bg-white drop-shadow-lg rounded-xl p-1 hover:bg-blue-300 ml-4 w-48 ">
+        <h5 className="bg-white drop-shadow-lg rounded-xl p-3 h-10  ml-4 w-24">
+          Sort By:
+        </h5>
+        <select
+          value={sortValue}
+          onChange={handleSort}
+          className="bg-white drop-shadow-lg rounded-xl p-1 hover:bg-blue-300 ml-4 w-48 "
+        >
           <option key="id_1" value={3}>
             Please Select Value
           </option>
@@ -145,9 +148,9 @@ const FetchApi = () => {
                   <div className=" mt-1 mb-2  ">
                     <div className="d1">
                       <div className="text-lg font-semi-bold ">
-                      <h1>{a.name}</h1>
+                        <h1>{a.name}</h1>
                       </div>
-                      
+
                       <div className="d1 mb-5">
                         <h1>{a.category}</h1>
                       </div>
@@ -168,39 +171,43 @@ const FetchApi = () => {
         })}
       </div>
       <div className="flex ml-80 mb-10">
-        <div> <button className="ml-84 bg-blue-400 rounded-xl p-1 hover:bg-blue-300" onClick={() => setPage((p) => p - 1)}>
-        Prev
-      </button></div>
-       
-      <div>
-      <button className="ml-10 mr-10  bg-blue-400 rounded-xl p-1 hover:bg-blue-300" onClick={() => setPage((p) => p + 1)}>
-        Next
-      </button>
-      </div>
-      <div className=" mb-1 ">
-        Per Page  
-        <select
-          value={limit}
-          onChange={(e) => setLimit(Number(e.target.value)) }
-         className =" bg-white drop-shadow-lg rounded-xl p-1 hover:bg-blue-300 ml-4 ">
-          <option key="id_1" value={3}>
-            3
-          </option>
-          <option key="id_2" value={6}>
-            6
-          </option>
-          <option key="id_3" value={9}>
-            9
-          </option>
-        </select>
-      
-      </div>
+        <div>
+          {' '}
+          <button
+            className="ml-84 bg-blue-400 rounded-xl p-1 hover:bg-blue-300"
+            onClick={() => setPage((p) => p - 1)}
+          >
+            Prev
+          </button>
+        </div>
 
-
+        <div>
+          <button
+            className="ml-10 mr-10  bg-blue-400 rounded-xl p-1 hover:bg-blue-300"
+            onClick={() => setPage((p) => p + 1)}
+          >
+            Next
+          </button>
+        </div>
+        <div className=" mb-1 ">
+          Per Page
+          <select
+            value={limit}
+            onChange={(e) => setLimit(Number(e.target.value))}
+            className=" bg-white drop-shadow-lg rounded-xl p-1 hover:bg-blue-300 ml-4 "
+          >
+            <option key="id_1" value={3}>
+              3
+            </option>
+            <option key="id_2" value={6}>
+              6
+            </option>
+            <option key="id_3" value={9}>
+              9
+            </option>
+          </select>
+        </div>
       </div>
-     
-      
-     
 
       {/* <button className="ml-10" onClick={() => filteredPosts('4.2')}>
         Sort

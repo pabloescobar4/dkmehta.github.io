@@ -8,8 +8,8 @@ export default function Navbar() {
 
   return (
     <>
-    <div className = " -red-100 w-full h-48">
-     <div className = " -blue-100 w-full h-16 ">
+    <div className = " -red-500 w-full h-48">
+     <div className = " -blue-500 w-full h-16 ">
 		 
 	 <div className = "-black w-9/12 ml-36 mt-2 grid grid-cols-5  ">
 	 <div>

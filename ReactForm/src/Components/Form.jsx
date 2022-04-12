@@ -22,9 +22,8 @@ import '../App.css'
 		 Email:"",
 		 PassWord:"",
 		 ConfirmPassword:"",
-
-
 	 })
+	 console.log(formData)
 	 const PageDisplay = () => {
 		
 		 if(page===0){

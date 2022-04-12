@@ -18,13 +18,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "homepage":"https://my-json-server.typicode.com/pabloescobar4/database",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "npx json-server --watch data/db.json --port 8002"
+    "eject": "react-scripts eject"
+   
     
 
   },

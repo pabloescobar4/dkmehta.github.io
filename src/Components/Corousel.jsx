@@ -18,7 +18,7 @@ import '../App.css'
         
           <Carousel itemsToShow={5}  itemsToScroll={5} breakPoints={breakPoints}>
             <div>
-              <div className=" border border-red-100  ml-16  w-3/4 ">
+              <div className=" -red-100  ml-16  w-3/4 ">
            
                 <div className=" ">
                   <div>

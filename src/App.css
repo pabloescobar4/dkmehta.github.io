@@ -121,17 +121,15 @@ img{
 	float:right;
 }
 
-/* 
+
  .rec.rec-arrow {
   border-radius: 50%;
   background-color: rgb(225, 225, 225);
-  width:1%;
-  margin-left:5%;
-  margin-right:5%;
+
   
 }
 
-
+/*
 .rec-arrow{
   color:rgb(118, 22, 22);
   background-color: rgb(225, 225, 225);

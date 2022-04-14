@@ -121,7 +121,7 @@ img{
 	float:right;
 }
 
-
+/* 
  .rec.rec-arrow {
   border-radius: 50%;
   background-color: rgb(225, 225, 225);
@@ -146,7 +146,7 @@ img{
 } 
 
 /* square buttons */
-.rec.rec-arrow {
+/* .rec.rec-arrow {
   border-radius: 100%;
 }
 /* round buttons on hover */
@@ -165,4 +165,4 @@ img{
 .rec-carousel-item {
  
  
-}
+} 

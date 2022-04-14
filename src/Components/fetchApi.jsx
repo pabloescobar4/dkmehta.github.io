@@ -4,6 +4,7 @@ import '../App.css';
 import axios from 'axios';
 
 
+
 const FetchApi = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);

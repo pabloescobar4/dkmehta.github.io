@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #app {
+        font-family: sans-serif;
+      }
+      #container {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin: 3%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="app"></h1>
+    </div>
+  </body>
+</html>
+
+<script>
+  let posts = [];
+
+  const fetchPosts = async () => {
+    fetch(`https://my-json-server.typicode.com/pabloescobar4/database/blogs`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((myJson) => {
+        posts = posts.concat(myJson);
+        DataPost(posts);
+      });
+  };
+
+  function DataPost(data) {
+    data.map((database) => {
+      const parent = document.getElementById('container');
+      const div = document.createElement('div');
+      let img = document.createElement('img');
+      img.src = database.image;
+      let dish = document.createElement('p');
+      dish.innerHTML = database.name;
+
+      div.append(img, dish);
+      parent.append(div);
+    });
+  }
+
+  window.onscroll = function (ev) {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      // alert("AT the bototm");
+      fetchPosts();
+    }
+  };
+  fetchPosts();
+</script>
